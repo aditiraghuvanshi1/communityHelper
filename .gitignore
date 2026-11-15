@@ -1,0 +1,11 @@
+/.env
+backend/.env
+backend/.venv/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.vscode/*
+!.vscode/settings.json

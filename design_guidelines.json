@@ -1,0 +1,330 @@
+{
+  "project_name": "CivicConnect",
+  "archetype": "ARCHETYPE 1: ORGANIC & EARTHY & CIVIC PRECISION",
+  "colors": {
+    "primary": "#172B3A",
+    "secondary": "#237A62",
+    "accent": "#E6A34A",
+    "on_accent": "#172B3A",
+    "background": "#F5F5F0",
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#F5F5F0",
+        "on_bg": "#172B3A",
+        "on_bg_muted": "#52656F",
+        "roles": {
+          "link": "#237A62",
+          "error": "#C2410C",
+          "success": "#15803D",
+          "warning": "#B45309"
+        }
+      },
+      {
+        "name": "card",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#172B3A",
+        "on_bg_muted": "#52656F",
+        "roles": {
+          "border": "#E2E4DC",
+          "link": "#237A62",
+          "error": "#C2410C",
+          "success": "#15803D"
+        }
+      },
+      {
+        "name": "nav_header",
+        "kind": "glass",
+        "contrast_against": "#FFFFFF",
+        "guarantee": "backdrop-blur-md bg-white/90 border-b border-[#E2E4DC] shadow-xs",
+        "on_bg": "#172B3A",
+        "on_bg_muted": "#52656F",
+        "roles": {
+          "link": "#172B3A",
+          "link_active": "#237A62",
+          "badge_bg": "#EAEFEA",
+          "badge_text": "#237A62"
+        }
+      },
+      {
+        "name": "dark_banner",
+        "kind": "solid",
+        "bg": "#172B3A",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#CBD5E1",
+        "roles": {
+          "link": "#FBBF24",
+          "accent_highlight": "#E6A34A",
+          "badge_bg": "#237A62",
+          "badge_text": "#FFFFFF"
+        }
+      },
+      {
+        "name": "locality_bar",
+        "kind": "solid",
+        "bg": "#EAECE4",
+        "on_bg": "#172B3A",
+        "on_bg_muted": "#52656F",
+        "roles": {
+          "active_pill_bg": "#237A62",
+          "active_pill_text": "#FFFFFF",
+          "border": "#D5D9CD"
+        }
+      },
+      {
+        "name": "badge_reported",
+        "kind": "solid",
+        "bg": "#FEE2E2",
+        "on_bg": "#991B1B",
+        "on_bg_muted": "#B91C1C"
+      },
+      {
+        "name": "badge_under_review",
+        "kind": "solid",
+        "bg": "#FEF3C7",
+        "on_bg": "#92400E",
+        "on_bg_muted": "#B45309"
+      },
+      {
+        "name": "badge_assigned",
+        "kind": "solid",
+        "bg": "#E0E7FF",
+        "on_bg": "#3730A3",
+        "on_bg_muted": "#4338CA"
+      },
+      {
+        "name": "badge_in_progress",
+        "kind": "solid",
+        "bg": "#E0F2FE",
+        "on_bg": "#075985",
+        "on_bg_muted": "#0284C7"
+      },
+      {
+        "name": "badge_resolved",
+        "kind": "solid",
+        "bg": "#DCFCE7",
+        "on_bg": "#166534",
+        "on_bg_muted": "#15803D"
+      },
+      {
+        "name": "badge_rejected",
+        "kind": "solid",
+        "bg": "#F1F5F9",
+        "on_bg": "#475569",
+        "on_bg_muted": "#64748B"
+      }
+    ],
+    "category_pins": {
+      "roads_potholes": "#EA580C",
+      "garbage_sanitation": "#16A34A",
+      "water_supply": "#0284C7",
+      "drainage_sewage": "#7C3AED",
+      "streetlights": "#D97706",
+      "electricity": "#CA8A04",
+      "public_safety": "#DC2626",
+      "other_infrastructure": "#4B5563"
+    }
+  },
+  "typography": {
+    "font_family_heading": "Manrope, sans-serif",
+    "font_family_body": "Inter, sans-serif",
+    "css_import": "@import \"@fontsource-variable/manrope\";\n@import \"@fontsource-variable/inter\";",
+    "scale_px": {
+      "display": 52,
+      "h1": 40,
+      "h2": 32,
+      "h3": 24,
+      "h4": 20,
+      "body": 16,
+      "caption": 14
+    },
+    "rules": {
+      "headings": "font-heading font-bold tracking-tight text-[#172B3A]",
+      "subheadings": "font-sans text-base text-[#52656F] leading-relaxed",
+      "overlines": "text-xs font-semibold tracking-wider uppercase text-[#237A62]"
+    }
+  },
+  "entry_surfaces": {
+    "/": "split hero — brand identity & quick locality issue summary left with submit CTA, interactive live Leaflet issue feed right",
+    "/login": "branded split login — citizen impact overview left, secure email/password form with test credentials right",
+    "/register": "branded split register — civic duty & onboarding guide left, registration form right",
+    "/report": "focused multi-step submission flow with interactive pin placement and photo upload",
+    "/admin": "dense functional command dashboard with KPI stats bar, locality filter dropdowns, issues management data table and analytics",
+    "/complaints/:id": "detailed split view with complaint metadata, real map pin, evidence photo gallery, upvote button, and official status timeline"
+  },
+  "layouts": {
+    "header": {
+      "height": "h-16",
+      "style": "sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E2E4DC] px-4 md:px-8 flex items-center justify-between"
+    },
+    "locality_bar": {
+      "style": "bg-[#EAECE4] border-b border-[#D5D9CD] px-4 md:px-8 py-2.5 flex items-center justify-between gap-4 flex-wrap text-sm"
+    },
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8",
+    "grid_modes": {
+      "dashboard_kpis": "grid grid-cols-2 lg:grid-cols-4 gap-4",
+      "complaints_grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+      "split_map_view": "grid grid-cols-1 lg:grid-cols-12 gap-6 min-h-[640px]"
+    }
+  },
+  "motion": {
+    "principles": "Subtle, functional transitions only. Avoid slow animations or bouncy decorations.",
+    "hover_transition": "transition-colors duration-150 ease-out",
+    "card_hover": "hover:border-[#CBD5E1] hover:shadow-sm transition-all duration-150",
+    "button_active": "active:scale-[0.98] transition-transform duration-75",
+    "toast_duration_ms": 3000
+  },
+  "accessibility": {
+    "contrast_standard": "WCAG AA (minimum 4.5:1 for body and captions)",
+    "focus_rings": "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#237A62] focus-visible:ring-offset-2",
+    "reduced_motion": "motion-reduce:transition-none motion-reduce:animate-none",
+    "data_testid_policy": "All interactive buttons, inputs, dropdowns, filters, cards, and modal triggers must have descriptive kebab-case data-testid attributes"
+  },
+  "image_urls": {
+    "sample_civic_issues": [
+      {
+        "category": "Garbage and sanitation",
+        "description": "Garbage pile on street corner in urban locality",
+        "url": "https://images.unsplash.com/photo-1785702217197-2a05999a37f8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBzdHJlZXQlMjBwb3Rob2xlcyUyMHJvYWQlMjBnYXJiYWdlfGVufDB8fHx8MTc5NDY2ODQxM3ww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "Roads and potholes",
+        "description": "Road maintenance and asphalt issue in urban street",
+        "url": "https://images.unsplash.com/photo-1687672736892-133aac1ec1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHw0fHxpbmRpYW4lMjBzdHJlZXQlMjBwb3Rob2xlcyUyMHJvYWQlMjBnYXJiYWdlfGVufDB8fHx8MTc5NDY2ODQxM3ww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "Marketplace & drainage",
+        "description": "Busy locality road with pedestrian and transport issues",
+        "url": "https://images.unsplash.com/photo-1636011203281-a76ae5a437dd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBzdHJlZXQlMjBwb3Rob2xlcyUyMHJvYWQlMjBnYXJiYWdlfGVufDB8fHx8MTc5NDY2ODQxM3ww&ixlib=rb-4.1.0&q=85"
+      }
+    ]
+  },
+  "instructions_to_main_agent": {
+    "setup_steps": [
+      "1. Install Leaflet: `cd /app/frontend && yarn add leaflet @types/leaflet`",
+      "2. Ensure Leaflet CSS is imported in `index.html` or `App.tsx` (`import 'leaflet/dist/leaflet.css';`)",
+      "3. Configure custom Leaflet DivIcon markers with SVG category icons and status indicator dots to avoid broken asset icon issues."
+    ],
+    "key_components": [
+      {
+        "name": "LocalitySelector",
+        "path": "@/components/LocalitySelector.tsx",
+        "description": "State -> District -> Town -> Locality cascading picker with GPS 'Detect My Locality' and search. Persisted to localStorage & synced across the app."
+      },
+      {
+        "name": "InteractiveMapView",
+        "path": "@/components/InteractiveMapView.tsx",
+        "description": "Full Leaflet map supporting mode: 'browse' (category markers, popups, cluster/filter) and mode: 'select_location' (draggable pin + search + GPS)."
+      },
+      {
+        "name": "StatusTimeline",
+        "path": "@/components/StatusTimeline.tsx",
+        "description": "Vertical civic tracking timeline for complaints (Reported -> Under Review -> Assigned -> In Progress -> Resolved/Rejected) with admin remarks and timestamps."
+      },
+      {
+        "name": "UpvoteButton",
+        "path": "@/components/UpvoteButton.tsx",
+        "description": "One-click civic upvote button with live count, optimistic UI update, and auth prompt if unauthenticated."
+      },
+      {
+        "name": "AdminStatusModal",
+        "path": "@/components/AdminStatusModal.tsx",
+        "description": "Allows municipal officers / admins to change complaint status, assign department, and add official resolution remarks or upload resolution proof."
+      }
+    ],
+    "indian_locality_data": {
+      "states": [
+        {
+          "name": "Karnataka",
+          "districts": [
+            {
+              "name": "Bengaluru Urban",
+              "towns": [
+                {
+                  "name": "Bengaluru",
+                  "localities": ["Indiranagar", "Koramangala", "HSR Layout", "Whitefield", "Jayanagar", "Malleshwaram", "Hebbal", "BTM Layout"]
+                }
+              ]
+            },
+            {
+              "name": "Mysuru",
+              "towns": [
+                {
+                  "name": "Mysuru",
+                  "localities": ["Gokulam", "Jayalakshmipuram", "Kuvempunagar", "Saraswathipuram", "Vijayanagar"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Maharashtra",
+          "districts": [
+            {
+              "name": "Mumbai Suburban",
+              "towns": [
+                {
+                  "name": "Mumbai",
+                  "localities": ["Bandra West", "Andheri East", "Juhu", "Powai", "Borivali West", "Dadar"]
+                }
+              ]
+            },
+            {
+              "name": "Pune",
+              "towns": [
+                {
+                  "name": "Pune",
+                  "localities": ["Kothrud", "Viman Nagar", "Koregaon Park", "Baner", "Aundh", "Hinjawadi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Delhi",
+          "districts": [
+            {
+              "name": "New Delhi",
+              "towns": [
+                {
+                  "name": "New Delhi",
+                  "localities": ["Connaught Place", "Lajpat Nagar", "Saket", "Hauz Khas", "Dwarka Sector 10", "Rohini Sector 7", "Karol Bagh"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Tamil Nadu",
+          "districts": [
+            {
+              "name": "Chennai",
+              "towns": [
+                {
+                  "name": "Chennai",
+                  "localities": ["T. Nagar", "Adyar", "Anna Nagar", "Mylapore", "Velachery", "Besant Nagar"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Telangana",
+          "districts": [
+            {
+              "name": "Hyderabad",
+              "towns": [
+                {
+                  "name": "Hyderabad",
+                  "localities": ["Gachibowli", "Madhapur (Hitec City)", "Jubilee Hills", "Banjara Hills", "Kukatpally", "Secunderabad"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
