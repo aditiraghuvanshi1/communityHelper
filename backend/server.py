@@ -63,3 +63,16 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+
+DIST = ROOT_DIR.parent / "frontend" / "dist"
+if DIST.exists():
+    app.mount("/assets", StaticFiles(directory=DIST / "assets"), name="assets")
+
+    @app.get("/{full_path:path}")
+    async def spa(full_path: str):
+        f = DIST / full_path
+        return FileResponse(f if f.is_file() else DIST / "index.html")
